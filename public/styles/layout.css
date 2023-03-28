@@ -21,6 +21,11 @@ body {
   font-size: 24px;
 }
 
+.container {
+  margin: auto;
+  width: 90%;
+}
+
 .center {
   display: flex;
   justify-content: center;
