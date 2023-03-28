@@ -21,8 +21,10 @@ body {
   font-size: 24px;
 }
 
-.tweeter-logo {
-  font-family: 'Bungee', sans-serif;
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*

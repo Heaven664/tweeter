@@ -1,0 +1,22 @@
+nav {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5em;
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  color: #FFFFFF;
+}
+
+.tweeter-logo {
+  font-family: 'Bungee', sans-serif;
+  font-size: 40px;
+}
+
+.write-new-tweet {
+  flex-direction: column;
+}
+
+
