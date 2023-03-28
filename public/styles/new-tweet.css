@@ -1,0 +1,45 @@
+.new-tweet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  width: 100%;
+}
+
+#tweet-text {
+  display: block;
+  background-color: inherit;
+  /* ask about fixed width */
+  width: 600px; 
+  height: 40px;
+  resize: none;
+  border: none;
+  font-weight: 600;
+  color: rgb(89, 89, 89);
+  border-bottom: 5px solid rgb(89, 89, 89);
+}
+
+#tweet-text::placeholder {
+  font-weight: 600;
+  color: rgb(89, 89, 89);
+}
+
+.tweet-form-bottom {
+  font-family: 'Bungee', sans-serif;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.counter {
+
+  font-weight: 600;
+}
+
+#tweet-button {
+  color: white;
+  background-color: #4056A1;
+  padding: 4px 8px;
+  cursor: pointer;
+  border: none;
+}
