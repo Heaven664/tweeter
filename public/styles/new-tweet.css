@@ -38,6 +38,11 @@
   font-weight: 600;
 }
 
+.counterNegative {
+  font-weight: 600;
+  color: red;
+}
+
 #tweet-button {
   color: white;
   background-color: #4056A1;
