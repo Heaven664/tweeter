@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
     
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -39,7 +40,7 @@
       </div>
     </nav>
 
-    <header>
+    <header class="site-header">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
@@ -59,6 +60,32 @@
             <output name="counter" id="tweet-counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+      </section>
+      <section class="tweets-body">
+        <article class="tweet-container">
+          <header>
+            <div class=>
+              <img src="https://i.imgur.com/73hZDYK.png" alt="">
+              <p>Newton</p>
+            </div>
+            <p>&#64;Sirlsaac</p>
+          </header>
+          <div>
+            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+               ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                dolore eu fugiat nulla pariatur.</h4>
+          </div>
+          <footer>
+            <p>10 days ago</p>
+            <div class="tweet-options">
+              <i class="fa-solid fa-flag fa-xs" style="color: #3477C7;"></i>
+              <i class="fa-solid fa-retweet fa-xs" style="color: #3477C7;"></i>
+              <i class="fa-solid fa-heart fa-xs" style="color: #3477C7;"></i>
+            </div>
+          </footer>
+        </article>
       </section>
     </main>
   </body>
