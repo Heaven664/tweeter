@@ -5,7 +5,11 @@
   margin: 50px 0;
 }
 
-.tweet-container header {
+.tweet-container:hover {
+  box-shadow: 7px 7px rgba(89, 89, 89, 0.7);
+}
+
+.tweet-container>header {
   display: flex;
   justify-content: space-between;
   padding: 0 1.5em;
@@ -45,10 +49,16 @@
   align-items: center;
 }
 
-.tweet-container footer>p {
+.tweet-container footer p {
   font-size: 18px;
 }
 
 .tweet-options>i {
+  color: #3477C7;
   margin: 0 0.3em;
+}
+
+.tweet-options>i:hover {
+  color: #10850a;
+  cursor: pointer;
 }
