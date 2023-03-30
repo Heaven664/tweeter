@@ -1,6 +1,17 @@
 $(() => {
 
   /**
+   * Escapes unsafe characters
+   * @param {string} str - any sequence of characters
+   * @returns same string
+   */
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
+  /**
    * Makes get request to /tweets using AJAX
    */
   const loadTweets = () => {
@@ -31,16 +42,16 @@ $(() => {
     <article class="tweet">
       <header>
         <div class="user-preview">
-          <img src="${tweet.user.avatars}">
-          <p>${tweet.user.name}</p>
+          <img src="${escape(tweet.user.avatars)}">
+          <p>${escape(tweet.user.name)}</p>
         </div>
-        <p>${tweet.user.handle}</p>
+        <p>${escape(tweet.user.handle)}</p>
       </header>
       <div>
-        <h4>${tweet.content.text}</h4>
+        <h4>${escape(tweet.content.text)}</h4>
       </div>
       <footer>
-        <p>${timeago.format(tweet.created_at)}</p>
+        <p>${escape(timeago.format(tweet.created_at))}</p>
         <div class="tweet-options">
           <i class="fa-solid fa-flag fa-xs"></i>
           <i class="fa-solid fa-retweet fa-xs"></i>
@@ -69,7 +80,7 @@ $(() => {
       type: "POST",
       url: "/tweets",
       data: $('#new-tweet-form').serialize()
-    }).then(loadTweets())
+    }).then(loadTweets());
   });
 })
 
