@@ -64,18 +64,25 @@ $(() => {
   };
 
   loadTweets();
-
+  
+  $('#error-message').slideUp(0);
   $('#new-tweet-form').submit((event) => {
     event.preventDefault();
     const length = $('#tweet-text').val().trim().length;
+    $('#error-message').slideUp(500)
     if (length < 1) {
-      alert('You should write something');
+      const message = `<p>You should write something</p>`;
+      $('#error-message').addClass('error').html(message).slideDown(500);
       return;
     }
+
     if (length > 140) {
-      alert('Your text is too long');
+      const message = `<p>Your text is too long</p>`;
+      $('#error-message').addClass('error').html(message).slideDown(500);
       return;
     }
+
+    $('#error-message').slideUp(500).html('');
     $.ajax({
       type: "POST",
       url: "/tweets",
