@@ -64,12 +64,12 @@ $(() => {
   };
 
   loadTweets();
-  
+
   $('#error-message').slideUp(0);
   $('#new-tweet-form').submit((event) => {
     event.preventDefault();
     const length = $('#tweet-text').val().trim().length;
-    $('#error-message').slideUp(500)
+    $('#error-message').slideUp(500);
     if (length < 1) {
       const message = `<p>You should write something</p>`;
       $('#error-message').addClass('error').html(message).slideDown(500);
@@ -88,6 +88,21 @@ $(() => {
       url: "/tweets",
       data: $('#new-tweet-form').serialize()
     }).then(loadTweets());
+  });
+
+  // Increases size of the logo
+  $('#new-tweet-button').hover(function () {
+    $('#nav-scroll-icon').addClass("fa-xl");
+  }, function () {
+    $('#nav-scroll-icon').removeClass("fa-xl");
+  });
+
+  // Scrolls to new tweet input and focuses on it
+  $('#new-tweet-button').click(() => {
+    $('html, body').animate({
+      scrollTop: $("#tweet-text").offset().top - 400
+    }, 800);
+    $("#tweet-text").focus();
   });
 })
 

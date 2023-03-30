@@ -19,4 +19,19 @@ nav {
   flex-direction: column;
 }
 
+#new-tweet-button {
+  background-color: inherit;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 15px;
+}
+
+#new-tweet-button:hover {
+  cursor: pointer;
+}
+
+#new-tweet-button i {
+  color: #f20707;
+}
+
 
