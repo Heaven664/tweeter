@@ -72,13 +72,19 @@ $(() => {
     $('#error-message').slideUp(500);
     if (length < 1) {
       const message = `<p>You should write something</p>`;
-      $('#error-message').addClass('error').html(message).slideDown(500);
+      $('#error-message').addClass('error').slideDown(500);
+      setTimeout(() => {
+        $('#error-message').html(message);
+      }, 500);
       return;
     }
 
     if (length > 140) {
       const message = `<p>Your text is too long</p>`;
-      $('#error-message').addClass('error').html(message).slideDown(500);
+      $('#error-message').addClass('error').slideDown(500);
+      setTimeout(() => {
+        $('#error-message').html(message);
+      }, 500);
       return;
     }
 
