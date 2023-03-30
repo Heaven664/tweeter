@@ -63,6 +63,17 @@ $(() => {
     return $tweet;
   };
 
+  /**
+   * Slides down error message
+   * @param {html} message - html error message
+   */
+  const showError = (message) => {
+    $('#error-message').addClass('error').slideDown(500);
+    setTimeout(() => {
+      $('#error-message').html(message);
+    }, 500);
+  };
+
   loadTweets();
 
   $('#error-message').slideUp(0);
@@ -72,23 +83,15 @@ $(() => {
     $('#error-message').slideUp(500);
     if (length < 1) {
       const message = `<p>You should write something</p>`;
-      $('#error-message').addClass('error').slideDown(500);
-      setTimeout(() => {
-        $('#error-message').html(message);
-      }, 500);
-      return;
+      return showError(message);
     }
 
     if (length > 140) {
       const message = `<p>Your text is too long</p>`;
-      $('#error-message').addClass('error').slideDown(500);
-      setTimeout(() => {
-        $('#error-message').html(message);
-      }, 500);
-      return;
+      return showError(message);
     }
 
-    $('#error-message').slideUp(500).html('');
+    $('#error-message').slideUp(500);
     $.ajax({
       type: "POST",
       url: "/tweets",
