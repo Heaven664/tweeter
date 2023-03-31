@@ -10,7 +10,7 @@
 - Mobile version
 ![Mobile version](https://github.com/Heaven664/tweeter/blob/master/docs/mobile.png?raw=true)
 - Demo
-https://user-images.githubusercontent.com/105215745/229089188-5531dd1d-f03c-4450-a637-217aacb1b43a.mov
+![Demo](https://user-images.githubusercontent.com/105215745/229089188-5531dd1d-f03c-4450-a637-217aacb1b43a.mov)
 
 ## Getting Started
 
