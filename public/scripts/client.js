@@ -25,7 +25,6 @@ $(() => {
    * @param {array} tweets - array of JSON objects
    */
   const renderTweets = (tweets) => {
-    $('.tweets-container').empty();
     for (const tweet of tweets) {
       const tweetElement = createTweetElement(tweet);
       $('.tweets-container').prepend(tweetElement);
@@ -94,12 +93,15 @@ $(() => {
     }
 
     $('#error-message').slideUp(500);
-
+    
+    $('.tweets-container').empty();
     $.ajax({
       type: "POST",
       url: "/tweets",
       data: $('#new-tweet-form').serialize()
-    }).then(loadTweets());
+    })
+    .then($('#tweet-text').val('')
+    .then(loadTweets()))
   });
 
   // Increases size of the logo
