@@ -92,6 +92,7 @@ $(() => {
     }
 
     $('#error-message').slideUp(500);
+
     $.ajax({
       type: "POST",
       url: "/tweets",
@@ -100,18 +101,20 @@ $(() => {
   });
 
   // Increases size of the logo
-  $('#new-tweet-button').hover(function () {
+  $('#write-new-tweet').hover(function () {
     $('#nav-scroll-icon').addClass("fa-xl");
   }, function () {
     $('#nav-scroll-icon').removeClass("fa-xl");
   });
 
-  // Scrolls to new tweet input and focuses on it
-  $('#new-tweet-button').click(() => {
-    $('html, body').animate({
-      scrollTop: $("#tweet-text").offset().top - 400
-    }, 800);
-    $("#tweet-text").focus();
+  $('#write-new-tweet').click(function () {
+    if ($('.new-tweet').is(':visible')) {
+      $('.new-tweet').slideUp(500);
+      $('#nav-scroll-icon').removeClass('fa-angles-down').addClass('fa-angles-up')
+    } else {
+      $('.new-tweet').slideDown(500);
+      $('#nav-scroll-icon').removeClass('fa-angles-up').addClass('fa-angles-down');
+    }
   });
 })
 
