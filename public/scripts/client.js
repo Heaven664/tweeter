@@ -77,6 +77,8 @@ $(() => {
   loadTweets();
 
   $('#error-message').slideUp(0);
+
+  // Displays and hides error messages
   $('#new-tweet-form').submit((event) => {
     event.preventDefault();
     const length = $('#tweet-text').val().trim().length;
@@ -107,14 +109,39 @@ $(() => {
     $('#nav-scroll-icon').removeClass("fa-xl");
   });
 
+  // Slides up and down tweet compose form
   $('#write-new-tweet').click(function () {
     if ($('.new-tweet').is(':visible')) {
       $('.new-tweet').slideUp(500);
-      $('#nav-scroll-icon').removeClass('fa-angles-down').addClass('fa-angles-up')
+      $('#nav-scroll-icon').removeClass('fa-angles-down').addClass('fa-angles-up');
     } else {
       $('.new-tweet').slideDown(500);
       $('#nav-scroll-icon').removeClass('fa-angles-up').addClass('fa-angles-down');
     }
+  });
+
+  // Adds scroll button if viewport under the tweet compose from 
+  $(document).scroll(function () {
+    const showHeight = 180;
+    let currentHeight = $(this).scrollTop();
+    if (currentHeight > showHeight) {
+      $('#scroller').fadeIn(100);
+    } else {
+      $('#scroller').fadeOut(100);
+    }
+
+  });
+
+  // Scrolls to new tweet input and focuses on it
+  $('#scroller').click(() => {
+    if (!$('.new-tweet').is(':visible')) {
+      $('.new-tweet').slideDown(1300);
+      $('#nav-scroll-icon').removeClass('fa-angles-up').addClass('fa-angles-down');
+    }
+    $('html, body').animate({
+      scrollTop: $("#tweet-text").offset().top - 400
+    }, 800);
+    $("#tweet-text").focus();
   });
 })
 
