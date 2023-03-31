@@ -4,11 +4,8 @@
 **Tweeter** uses AJAX for making asynchronous http requests to the server.
 **Tweeter** provides responsive UI for different viewport width
 
-# Projects showcase
-- Demo
+# Projects Demo
 ![demo](https://user-images.githubusercontent.com/105215745/229091177-85f13f98-6752-45bf-8e54-97d08638c5a0.gif)
-- Mobile version
-![Mobile version](https://github.com/Heaven664/tweeter/blob/master/docs/mobile.png?raw=true)
 
 ## Getting Started
 
