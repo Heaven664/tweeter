@@ -126,22 +126,29 @@ $(() => {
     let currentHeight = $(this).scrollTop();
     if (currentHeight > showHeight) {
       $('#scroller').fadeIn(100);
+      $('#write-new-tweet').fadeOut(100);
     } else {
       $('#scroller').fadeOut(100);
+      $('#write-new-tweet').fadeIn(100);
     }
 
   });
 
   // Scrolls to new tweet input and focuses on it
   $('#scroller').click(() => {
+    // if form is hided
     if (!$('.new-tweet').is(':visible')) {
       $('.new-tweet').slideDown(1300);
       $('#nav-scroll-icon').removeClass('fa-angles-up').addClass('fa-angles-down');
     }
+    // animate the scroll
     $('html, body').animate({
       scrollTop: $("#tweet-text").offset().top - 400
     }, 800);
-    $("#tweet-text").focus();
+    // focus on the form
+    setTimeout(() => {
+      $("#tweet-text").focus();
+    }, 850);
   });
 })
 
