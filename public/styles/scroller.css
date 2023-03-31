@@ -1,8 +1,9 @@
 #scroller {
   display: none;
   position: fixed;
-  bottom: 2vw;
-  right: 2vw;
+  bottom: 0;
+  right: 0;
+  margin: 2vw;
 }
 
 #scroll-top-button{
