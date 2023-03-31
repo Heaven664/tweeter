@@ -100,6 +100,7 @@ $(() => {
       data: $('#new-tweet-form').serialize()
     }).then((tweet) => {
       $('#tweet-text').val('');
+      $('.counter').val(140);
       loadTweets();
     });
   });
