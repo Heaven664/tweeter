@@ -22,16 +22,40 @@ body {
 }
 
 .container {
-  margin: auto;
+  margin:auto;
   width: 90%;
-}
-
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ .center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  header.site-header {
+    border-radius: 20px;
+    height: 400px;
+    width: 30vw;
+    margin-top: 200px;
+  }
+
+  .container {
+    margin: 0;
+    margin-top: 180px;
+    width: 50vw;
+  }
+
+  .error {
+    margin-top: 20px;
+  }
+}
