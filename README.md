@@ -1,7 +1,7 @@
 # Tweeter Project
 
 **Tweeter** is a simple, single-page Twitter clone.  
-**Tweeter** uses AJAX for making asynchronous http requests to the server.
+**Tweeter** uses AJAX for making asynchronous http requests to the server  
 **Tweeter** provides responsive UI for different viewport width
 
 # Project Demo
