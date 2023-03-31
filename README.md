@@ -5,8 +5,10 @@
 **Tweeter** provides responsive UI for different viewport width
 
 # Projects showcase
-![...](link)
-![...](link)
+- Desktop version
+![Desktop version](https://github.com/Heaven664/tweeter/blob/master/docs/desctop.png?raw=true)
+- Mobile version
+![Mobile version](https://github.com/Heaven664/tweeter/blob/master/docs/mobile.png?raw=true)
 
 ## Getting Started
 
